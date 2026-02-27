@@ -1,0 +1,82 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Authentication Successful</title>
+    <meta http-equiv="refresh" content="0;url={{DEEP_LINK_URL}}" />
+    <style>
+      :root {
+        --primary-color: #9178b4;
+      }
+      body {
+        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
+          sans-serif;
+        text-align: center;
+        margin: 0;
+        display: flex;
+        width: 100vw;
+        height: 100vh;
+        flex-direction: column;
+        align-items: center;
+        background: rgb(248, 248, 250);
+      }
+
+      .container {
+        margin-top: 24px;
+      }
+
+      .success {
+        color: var(--primary-color);
+        font-weight: lighter;
+        font-size: 2.2rem;
+        margin: 16px 0;
+      }
+
+      .link {
+        color: var(--primary-color);
+        text-decoration: underline;
+        text-underline-offset: 3px;
+        opacity: 0.7;
+        transition: opacity 0.1s ease-in-out;
+      }
+
+      .link:hover {
+        opacity: 1;
+      }
+
+      .logo {
+        margin-bottom: 20px;
+        display: flex;
+        justify-content: center;
+      }
+
+      .logo img {
+        width: 480px;
+        height: 480px;
+      }
+
+      .subtext {
+        line-height: 1.5;
+      }
+
+      .subtext span {
+        opacity: 0.3;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="container">
+      <div class="logo">
+        <img src="/assets/astro.png" alt="Astro Logo" />
+      </div>
+      <h2 class="success">
+        Sign in successful. Redirecting to Antigravity G...
+      </h2>
+      <p class="subtext">
+        <span>If you weren't redirected automatically,</span>
+        <a href="{{DEEP_LINK_URL}}" class="link">click here</a>
+        <span>.</span>
+      </p>
+    </div>
+  </body>
+</html>

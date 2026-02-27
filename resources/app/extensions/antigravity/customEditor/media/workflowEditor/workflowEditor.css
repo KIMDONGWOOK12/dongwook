@@ -1,0 +1,117 @@
+/* Workflow Editor Styles */
+.workflow-editor {
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  height: 100vh;
+  margin-bottom: 8px;
+  box-sizing: border-box;
+  color: var(--vscode-editor-foreground);
+  font-family: var(--vscode-font-family);
+  background-color: var(--vscode-editor-background);
+}
+
+.workflow-section {
+  margin-bottom: 12px;
+  box-sizing: border-box;
+  width: 100%;
+}
+
+label {
+  display: block;
+  margin-bottom: 4px;
+  font-weight: bold;
+  color: var(--vscode-editor-foreground);
+}
+
+input[type='text'] {
+  width: 100%;
+  padding: 8px 10px;
+  font-size: 14px;
+  border: 1px solid var(--vscode-input-border);
+  background-color: var(--vscode-input-background);
+  color: var(--vscode-input-foreground);
+  border-radius: 2px;
+  font-family: var(--vscode-editor-font-family);
+  letter-spacing: -0.5px;
+}
+
+textarea {
+  width: 100%;
+  height: calc(100vh - 120px);
+  padding: 10px;
+  font-size: 14px;
+  border: 1px solid var(--vscode-input-border);
+  background-color: var(--vscode-input-background);
+  color: var(--vscode-input-foreground);
+  font-family: var(--vscode-editor-font-family);
+  resize: none;
+  border-radius: 2px;
+  letter-spacing: 0px;
+}
+
+input:focus,
+textarea:focus {
+  outline: 1px solid var(--vscode-focusBorder);
+  border-color: var(--vscode-focusBorder);
+}
+
+/* Input wrapper for positioning counter */
+.input-wrapper {
+  position: relative;
+  width: 100%;
+}
+
+/* Container for error message and character counter */
+.input-messages {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  position: relative;
+  min-height: 18px;
+  margin-top: 2px;
+}
+
+/* Container for label and counter */
+.label-counter-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 0px;
+  margin-bottom: 2px;
+  width: 100%; /* Ensure container takes full width */
+  box-sizing: border-box; /* Include padding in width calculation */
+  padding: 0; /* No padding needed */
+}
+
+/* Input character limit styles */
+.char-counter {
+  text-align: right;
+  font-size: 12px;
+  color: var(--vscode-descriptionForeground);
+  position: absolute;
+  right: 20px;
+}
+
+/* Display counter values using data attributes */
+.char-counter::before {
+  content: attr(data-current) '/' attr(data-max);
+}
+
+/* Make sure to update inputErrorClassName and charCounterErrorClassName if the class names are updated. */
+.char-counter-error {
+  color: var(--vscode-inputValidation-errorForeground, #f14c4c);
+}
+
+/* Input character limit error style */
+.input-char-limit-error {
+  outline: 1px solid var(--vscode-inputValidation-errorBorder, #f14c4c) !important;
+  border-color: var(--vscode-inputValidation-errorBorder, #f14c4c) !important;
+}
+
+/* Input character limit error style */
+.input-error-message {
+  display: none;
+  color: var(--vscode-inputValidation-errorForeground, #f14c4c);
+  font-size: 12px;
+}

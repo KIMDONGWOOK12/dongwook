@@ -1,0 +1,9 @@
+Antigravity
+
+Copyright (c) 2025, Google LLC
+All rights reserved.
+
+Third Party Content
+------------------------------------------------------------------------------------------
+This extension contains code adapted from https://github.com/jeanp413/open-remote-wsl
+See LICENSE.open-remote-wsl.txt for the original license.
